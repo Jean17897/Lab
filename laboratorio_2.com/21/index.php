@@ -24,8 +24,9 @@
             </tr>
         </thead>
         <tbody>
+        <?php for($x=1; $x<=10; $x++){?>
             <tr>
-                <th scope="row">1</th>
+                <th scope="row"><?php echo $x ?></th>
                 <td><?php echo "".$valor1=rand(45,100); ?></td>
                 <td><div class="progress"> 
                 <div class="progress-bar <?php if($valor1<61) 
@@ -40,38 +41,9 @@
                     echo "bg-success"; ?> progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?php echo "".$valor1?>%;" aria-valuenow="<?php echo "".$valor1?>" aria-valuemin="0" aria-valuemax="100"><?php echo "".$valor1?>%</div>
                 </div></td>
             </tr>
-            <tr>
-                <th scope="row">2</th>
-                <td><?php echo "".$valor2=rand(45,100); ?></td>
-                <td><div class="progress"> 
-                <div class="progress-bar <?php if($valor2<61) 
-                    echo "bg-secondary";
-                if($valor2>=61 and $valor2<=70) 
-                    echo "bg-danger";
-                if($valor2>=71 and $valor2<=80) 
-                    echo "bg-warning"; 
-                if($valor2>=81 and $valor2<=90) 
-                    echo "bg-info"; 
-                if($valor2>90) 
-                    echo "bg-success"; ?> progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?php echo "".$valor1?>%;" aria-valuenow="<?php echo "".$valor2?>" aria-valuemin="0" aria-valuemax="100"><?php echo "".$valor2?>%</div>
-                </div></td>
-            </tr>
-            <tr>
-                <th scope="row">3</th>
-                <td><?php echo "".$valor3=rand(45,100); ?></td>
-                <td><div class="progress"> 
-                <div class="progress-bar <?php if($valor3<61) 
-                    echo "bg-secondary";
-                if($valor3>=61 and $valor3<=70) 
-                    echo "bg-danger";
-                if($valor3>=71 and $valor3<=80) 
-                    echo "bg-warning"; 
-                if($valor3>=81 and $valor3<=90) 
-                    echo "bg-info"; 
-                if($valor3>90) 
-                    echo "bg-success"; ?> progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?php echo "".$valor1?>%;" aria-valuenow="<?php echo "".$valor3?>" aria-valuemin="0" aria-valuemax="100"><?php echo "".$valor3?>%</div>
-                </div></td>
-            </tr>
+            
+        <?php } ?>
+
         </tbody>
     </table>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

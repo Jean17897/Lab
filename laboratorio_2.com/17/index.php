@@ -25,59 +25,12 @@
         </tr>
     </thead>
     <tbody>
+        <?php for($x=0; $x<=12; $x++){?> 
         <tr>
-            <th scope="row">0</th>
-            <td><a href="index0.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
+            <th scope="row"><?php echo $x ?></th>
+            <td><a href="indextabla.php?numero=<?php echo $x ?>"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
         </tr>
-        <tr>
-            <th scope="row">1</th>
-            <td><a href="index1.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td><a href="index2.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td><a href="index3.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">4</th>
-            <td><a href="index4.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">5</th>
-            <td><a href="index5.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">6</th>
-            <td><a href="index6.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">7</th>
-            <td><a href="index7.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">8</th>
-            <td><a href="index8.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">9</th>
-            <td><a href="index9.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">10</th>
-            <td><a href="index10.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">11</th>
-            <td><a href="index11.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-        <tr>
-            <th scope="row">12</th>
-            <td><a href="index12.html"><button type="button" class="btn btn-dark">Ver Tabla</button></a></td>
-        </tr>
-
+        <?php } ?>
     </tbody>
 </table>
 

@@ -33,17 +33,18 @@
             </tr>
         </thead>
         <tbody>
+        <?php for($x=1; $x<=100; $x++){?>
             <tr>
-                <th scope="row">1</th>
-                <td> <?php echo "". md5($valor=1); ?> </td>
-                <td><a href="index.html"><button type="button" class="btn btn-dark">Ver</button></a></td>
+                <th scope="row"><?php echo $x ?></th>
+                <td> <?php echo "". md5($x); ?> </td>
+                <td><a href="indexcifrado.php?valor=<?php echo $x ?>"><button type="button" class="btn btn-dark">Ver</button></a></td>
                 <td><!-- Button trigger modal -->
-                <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Ver Modal
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal<?php echo $x ?>">
+                    Ver Modal 
                 </button>
                 
                 <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal<?php echo $x ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog        ">
                         <div class="modal-content">
                             <div class="modal-header">
@@ -51,7 +52,7 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                                <p> <?php echo "El numero es 1, cifrado es :\n".md5($valor=1); ?> </p>
+                                <p> <?php echo "El valor es :$x y cifrado es : ".md5($x); ?> </p>
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -61,6 +62,7 @@
                     </div>
                 </div></td>
             </tr>
+        <?php } ?>
         </tbody>
     </table>
 

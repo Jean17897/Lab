@@ -24,11 +24,13 @@
             </tr>
         </thead>
         <tbody>
+        <?php for($x=1; $x<=100; $x++){?>
             <tr>
-                <th scope="row">1</th>
-                <td> <?php echo "". md5($valor=1); ?> </td>
-                <td><a href="index.html"><button type="button" class="btn btn-dark">Ver</button></a></td>
+                <th scope="row"><?php echo $x ?></th>
+                <td> <?php echo "". md5($x); ?> </td>
+                <td><a href="indexcifrado.php?valor=<?php echo $x ?>"><button type="button" class="btn btn-dark">Ver</button></a></td>
             </tr>
+        <?php } ?>
         </tbody>
     </table>
 
